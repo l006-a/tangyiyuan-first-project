@@ -68,9 +68,6 @@ JAVA_WEB_Work
 │   ├── Login.jsp           # 登录 / 注册入口
 │   ├── Index.jsp           # 主页面
 │   └── WEB-INF/web.xml
-├── homework_requirements_and_function_diagram.md
-├── project_function_diagram.md
-└── project_diagram_prompt_for_ai.md
 ```
 
 ## 核心接口入口
@@ -100,8 +97,6 @@ JAVA_WEB_Work
 
 仓库中目前没有独立提供建表 SQL 文件。如果需要完整跑通数据库，请结合以下内容自行补齐：
 
-- `project_diagram_prompt_for_ai.md`
-- `homework_requirements_and_function_diagram.md`
 - 各 `Servlet` 中的 SQL 语句
 
 默认数据库名为 `scripthub`。
