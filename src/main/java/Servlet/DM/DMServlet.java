@@ -93,14 +93,7 @@ public class DMServlet extends HttpServlet {
         String queryDateStart;
         String queryDateEnd;
 
-        if (targetDateStr == null || targetDateStr.isEmpty()) {
-            queryDateStart = DateUtil.today();
-            queryDateEnd = DateUtil.formatDate(DateUtil.tomorrow());
-        } else {
-            queryDateStart = targetDateStr;
-            queryDateEnd = DateUtil.formatDate(DateUtil.offsetDay(DateUtil.parse(targetDateStr), 1));
-        }
-
+        
         String listSql = "SELECT r.id, r.start_time, r.end_time, r.status, r.current_num, r.max_num, s.title " +
                 "FROM rooms r JOIN scripts s ON r.script_id = s.id " +
                 "WHERE r.dm_id = ? AND r.start_time >= ? AND r.start_time < ? " +
